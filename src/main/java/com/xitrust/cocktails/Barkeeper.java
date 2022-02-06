@@ -10,7 +10,12 @@ public class Barkeeper {
 
 	public static IDrink mix(IDrink... parts) {
 
-		return null;
+		MixedDrink mix = new MixedDrink();
+
+		for (IDrink drink : parts)
+			mix.addDrink(drink);
+
+		return mix;
 	}
 
 	public IDrink createColaRum() {
